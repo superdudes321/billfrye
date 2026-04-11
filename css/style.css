@@ -11,6 +11,10 @@ header {
 	display: inline-block;
 }
 
+button, a {
+	cursor: pointer;
+}
+
 /* Row for top boxes */
 .top-row {
   display: flex;
@@ -57,13 +61,6 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Image inside vertical box */
-.side-box img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-}
-
 /* Button container box */
 .button-box {
   border: 3px solid #333;
@@ -101,23 +98,106 @@ header {
   justify-content: space-between; /* spreads them evenly */
   align-items: center;
   gap: 5px; /* space between items */
+  padding: 50px;
 }
 
 /* Each image + text block */
 .item {
+  border: none;
+  background-color: transparent;
   text-align: center;
-  flex: 1; /* makes all items equal width */
+  outline: none;
+  transition:all 0.5s ease-in-out;
+  width: 150px;
+  &:hover:nth-child(even) {
+	transform: scale(1.2,1.2) rotate(5deg);
+  }
+  &:hover:nth-child(odd) {
+	transform: scale(1.1,1.1) rotate(-5deg);
+  }
 }
 
 /* Images */
 .item img {
-  width: 200px;   /* adjust size as needed */
-  height: auto;
+  width: auto;   /* adjust size as needed */
+  height: 100px;
   border-radius: 10px; /* optional rounded images */
+}
+.pfp {
+	position: relative;
+	width: 150px;
+	margin: 0 auto;
+}
+
+:root {
+	--img-scale: scale(1.2, 1.2);
+}
+
+.professional, .unprofessional{
+	width:150px;
+	position: absolute;
+	backface-visibility: hidden;
+	border-radius:75px;
+	border: solid 3px black;
+	transition: all 0.3s ease-in-out;
+	transform-style: preserve-3d;
+	.flip &.professional {
+		transform: rotateY(180deg);
+		.pfp:hover & {
+			transform: rotateY(180deg) var(--img-scale);
+		}
+	}
+	.flip &.unprofessional {
+		transform: rotateY(360deg);
+		.pfp:hover & {
+			transform: rotateY(360deg) scale(1.2, 1.2);
+		}
+	}
+	.pfp:hover & {
+		transform: scale(1.2, 1.2);
+	}
+}
+
+.unprofessional{
+	transform: rotateY(180deg);
+	.pfp:hover & {
+		transform: rotateY(180deg) scale(1.2, 1.2);
+	}
 }
 
 /* Text under images */
 .item p {
   margin-top: 10px;
   font-weight: bold;
+}
+
+.text-center {
+	text-align: center;
+}
+
+dialog[open] {
+	border-radius: 15px;
+	transition: all 0.3s ease-in-out;
+	opacity: 1;
+	padding: 50px;
+	position: relative;
+	@starting-style {
+    opacity: 0;
+		transform: translateY(75px);
+	}
+	
+	.close {
+		border: solid 2px black; 
+		background-color: red;
+		border-radius: 5px;
+		color: white;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		
+		transition:all 0.3s ease-in-out;
+		&:hover {
+			transform: scale(1.1,1.1);
+		}
+	}
 }

@@ -8,6 +8,16 @@
 	<!--- Stylesheets --->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
+	<!--JavaScript-->
+	<script type="module">
+		document.addEventListener('click', (event) => {
+			if (!event.target.matches('.professional,.unprofessional')) return
+			
+			document.body.classList.toggle('flip')
+		})
+	</script>
+	<link rel='preload' href='Images/Unprofessional.webp'>
+	
 	<title>Bill Frye's Website</title>
 </head>
 <body>
@@ -16,7 +26,10 @@
 	<div class="top-row">
 		<!--Top left vertical box-->
 		<div class="side-box">
-			<img src="" alt="PFP">
+			<div class='pfp'>
+			<img class="professional" src="Images/Professional.png" alt="PFP">
+			<img class="unprofessional" src="Images/Unprofessional.webp" alt="PFP">
+			</div>
 		</div>
 	
 		<!--Top Right Box-->
@@ -34,12 +47,13 @@
 	
 	<!--Box-->
 	<div class="text-box">
-		<p class="item">Welcome to my website! This is all of my media wrapped up in one place. :)</p>	
+		<p class='text-center'>Welcome to my website! This is all of my media wrapped up in one place. :)</p>
+		<br>		
 		<div class="image-row">
-			<div class="item">
+			<button class="item" command="show-modal" commandfor="about">
 			  <img src="Images/Aboutme.png" alt="About Me">
 			  <p>About Me</p>
-			</div>
+			</button>
 			<div class="item">
 			  <img src="Images/Links.png" alt="Links">
 			  <p>Links</p>
@@ -54,6 +68,7 @@
 			</div>
 		</div>
 	</div>
+	<dialog id="about">This is the about page!<button class='close' command='close' commandfor="about">X</button></dialog>
 </body>
 
 <!---Footer--->
