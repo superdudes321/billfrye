@@ -1,3 +1,7 @@
+:root {
+	--pfp-scale: scale(1.1);
+}
+
 body {
 	max-width: 1000px;
 	float: none;
@@ -129,10 +133,6 @@ main {
 	margin: 0 auto;
 }
 
-:root {
-	--img-scale: scale(1.2, 1.2);
-}
-
 .professional {
 	backface-visibility: hidden;
 }
@@ -147,24 +147,24 @@ main {
 	.flip &.professional {
 		transform: rotateY(180deg);
 		.pfp:hover & {
-			transform: rotateY(180deg) var(--img-scale);
+			transform: rotateY(180deg) var(--pfp-scale);
 		}
 	}
 	.flip &.unprofessional {
 		transform: rotateY(360deg);
 		.pfp:hover & {
-			transform: rotateY(360deg) scale(1.2, 1.2);
+			transform: rotateY(360deg) var(--pfp-scale);
 		}
 	}
 	.pfp:hover & {
-		transform: scale(1.2, 1.2);
+		transform: var(--pfp-scale);
 	}
 }
 
 .unprofessional{
 	transform: rotateY(180deg);
 	.pfp:hover & {
-		transform: rotateY(180deg) scale(1.2, 1.2);
+		transform: rotateY(180deg) var(--pfp-scale);
 	}
 }
 
