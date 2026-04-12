@@ -4,51 +4,51 @@
 	<!---Metas--->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Bill Frye's Personal Website!">
-	
+
 	<!--- Stylesheets --->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
+
 	<!--JavaScript-->
 	<script type="module">
 		document.addEventListener('click', (event) => {
 			if (!event.target.matches('.professional,.unprofessional')) return
-			
+
 			document.body.classList.toggle('flip')
 		})
 	</script>
-	<link rel='preload' href='Images/Unprofessional.webp'>
-	
+	<link rel='preload' href='Images/Unprofessional.webp' as='image'>
+
 	<title>Bill Frye's Website</title>
 </head>
 <body>
-	
+
 	<!--Top Row-->
 	<div class="top-row">
 		<!--Top left vertical box-->
 		<div class="side-box">
 			<div class='pfp'>
-			<img class="professional" src="Images/Professional.png" alt="PFP">
-			<img class="unprofessional" src="Images/Unprofessional.webp" alt="PFP">
+        <img class="unprofessional" src="Images/Unprofessional.webp" alt="PFP">
+        <img class="professional" src="Images/Professional.png" alt="PFP">
 			</div>
 		</div>
-	
+
 		<!--Top Right Box-->
 		<div class="right-side-box">
-	
+
 		</div>
 	</div>
-	
+
 	<!--Resume box-->
 	<div class="button-box">
 	<p class="item">Check out my experience!</p>
 		<button class="btn">Resume</button>
 		<button class="btn">CV</button>
 	</div>
-	
+
 	<!--Box-->
 	<div class="text-box">
 		<p class='text-center'>Welcome to my website! This is all of my media wrapped up in one place. :)</p>
-		<br>		
+		<br>
 		<div class="image-row">
 			<button class="item" command="show-modal" commandfor="about">
 			  <img src="Images/Aboutme.png" alt="About Me">
