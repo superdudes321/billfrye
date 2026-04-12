@@ -122,6 +122,14 @@ main {
   padding: 50px;
 }
 
+.media-row-one{
+  display: flex;
+  justify-content: space-between; /* spreads them evenly */
+  align-items: center;
+  gap: 5px; /* space between items */
+  padding: 50px;
+}
+
 /* Each image + text block */
 .item {
   border: none;
