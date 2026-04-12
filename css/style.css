@@ -15,6 +15,10 @@ button, a {
 	cursor: pointer;
 }
 
+main {
+	padding:30px;
+}
+
 /* Row for top boxes */
 .top-row {
   display: flex;
