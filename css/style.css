@@ -172,6 +172,8 @@ main {
 }
 
 .professional, .unprofessional{
+	height:150px;
+	cursor:pointer;
 	width:150px;
 	position: absolute;
 	border-radius:75px;
