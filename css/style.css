@@ -256,3 +256,8 @@ dialog[open] {
 .logo {
   max-width: 100%;
 }
+
+.copyright{
+	background-color:blue;
+	color:white;
+}
