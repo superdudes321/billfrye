@@ -91,6 +91,12 @@ main {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+.resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Grid */
 
 .mestuff {
@@ -311,7 +317,7 @@ dialog[open] {
     grid-column: 1;
     grid-row: 2;
   }
-  
+
 	.resume{
 		grid-column: 1;
 		grid-row: 3;
