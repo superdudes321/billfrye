@@ -2,10 +2,15 @@
 	--pfp-scale: scale(1.1);
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
 	max-width: 1200px;
 	margin: 0 auto;
-	font-family: Consolas;
+	font-family: system-ui, sans-serif;
 	background-image: url("/Images/Windows98bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
