@@ -22,6 +22,9 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	&.insane{
+	background-image: url("/Images/Tank1.webp");		
+	}
 }
 
 header {

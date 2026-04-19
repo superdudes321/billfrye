@@ -8,3 +8,10 @@ document.addEventListener('click', (event) => {
 	if (!element) return
 	new Audio(element.dataset.audio).play()
 })
+console.log('before')
+document.addEventListener('click', (event) => {
+	console.log('boom')
+	if (!event.target.closest('footer')) return
+	document.body.classList.toggle('insane')
+})
+console.log('after')
