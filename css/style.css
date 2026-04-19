@@ -16,7 +16,7 @@ html, body {
 body {
 	max-width: 1200px;
 	margin: 0 auto;
-	font-family: system-ui, sans-serif;
+	font-family: consolas, system-ui, sans-serif;
 	font-size: 16px;
 	background-image: url("/Images/Windows98bg.jpg");
 	background-size: cover;
@@ -27,6 +27,11 @@ body {
 header {
 	width: 100%;
 	display: inline-block;
+}
+
+#Welcome{
+	text-align: center;
+	font-size: 18px;
 }
 
 button, a {
@@ -150,7 +155,7 @@ footer {
   justify-content: space-between; /* spreads them evenly */
   align-items: center;
   gap: 5px; /* space between items */
-  padding: 50px;
+  padding: 25px;
 }
 
 .media-row-one{
