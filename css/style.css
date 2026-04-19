@@ -81,7 +81,7 @@ main {
   }
 }
 
-.media {
+.media, .resume {
 	border: 3px solid #333;
   border-radius: 15px;
   padding:20px;
@@ -99,6 +99,11 @@ main {
 .media {
   grid-column: 2 / 4;
   grid-row: 1;
+}
+
+.resume{
+	grid-column: 2;
+	grid-row: 2;
 }
 
 footer {
@@ -305,9 +310,14 @@ dialog[open] {
     grid-column: 1;
     grid-row: 2;
   }
+  
+	.resume{
+		grid-column: 1;
+		grid-row: 3;
+	}
 
   footer {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 4;
   }
 }
