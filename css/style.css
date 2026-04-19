@@ -2,18 +2,26 @@
 	--pfp-scale: scale(1.1);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
 	max-width: 1200px;
 	margin: 0 auto;
 	font-family: system-ui, sans-serif;
+	font-size: 16px;
 	background-image: url("/Images/Windows98bg.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 header {
@@ -93,28 +101,6 @@ footer {
   grid-row: 3;
 }
 
-@media (max-width: 750px) {
-  main {
-    grid-auto-rows: minmax(100px, auto);
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .mestuff {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .media {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  footer {
-    grid-column: 1;
-    grid-row: 3;
-  }
-}
-
 /*bottom box*/
 .text-box {
   border: 3px solid #333;
@@ -187,6 +173,7 @@ footer {
 .item {
   border: none;
   background-color: transparent;
+  font-size: 24px;
   text-align: center;
   outline: none;
   transition:all 0.5s ease-in-out;
@@ -292,4 +279,30 @@ dialog[open] {
 .copyright{
 	background-color:blue;
 	color:white;
+}
+
+@media (max-width: 750px) {
+  .image-row {
+    justify-content: center;
+  }
+
+  main {
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .mestuff {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .media {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  footer {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }
