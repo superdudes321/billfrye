@@ -18,12 +18,41 @@ body {
   margin: 0 auto;
   font-family: consolas, system-ui, sans-serif;
   font-size: 16px;
-  background-image: url("/Images/Windows98bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  &.insane{
+
+  &.xp {
+    background-image: url("/Images/Windows98bg.jpg");
+  }
+
+  &.insane {
     background-image: url("/Images/Tank1.webp");
+    background-size: stretch;
+  }
+
+  &.frenzy {
+    background-image: url("/Images/FeedingFrenzy.png");
+    background-size: stretch;
+  }
+
+  &.zelda {
+    background-image: url("/Images/Ocarina.webp");
+    background-size: stretch;
+  }
+
+  &.luigi {
+    background-image: url("/Images/LuigisMansion.png");
+    background-size: stretch;
+  }
+
+  &.minecraft {
+    background-image: url("/Images/Minecraft.jpg");
+    background-size: stretch;
+  }
+
+  &.mario64 {
+    background-image: url("/Images/Mario64.jpg");
     background-size: stretch;
   }
 }
@@ -45,7 +74,7 @@ button, a {
 main {
   display: grid;
   gap: 30px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: auto;
   grid-template-columns: repeat(3, 1fr);
   padding: 30px;
 }
@@ -99,6 +128,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  cursor: pointer;
 }
 
 /* Grid */
