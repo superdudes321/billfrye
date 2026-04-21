@@ -210,10 +210,11 @@ footer {
 }
 
 .media-row{
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 5px; /* space between items */
+  justify-content: center;
   padding: 50px;
 }
 
