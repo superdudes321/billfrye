@@ -14,13 +14,14 @@ html, body {
 }
 
 body {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: consolas, system-ui, sans-serif;
-  font-size: 16px;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: consolas, system-ui, sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
 
   &.xp {
     background-image: url("/Images/Windows98bg.jpg");
@@ -28,32 +29,32 @@ body {
 
   &.insane {
     background-image: url("/Images/Tank1.webp");
-    background-size: stretch;
+    background-size: 100% 100%;
   }
 
   &.frenzy {
     background-image: url("/Images/FeedingFrenzy.png");
-    background-size: stretch;
+    background-size: 100% 100%;
   }
 
   &.zelda {
     background-image: url("/Images/Ocarina.webp");
-    background-size: stretch;
+    background-size: 100% 100%;
   }
 
   &.luigi {
     background-image: url("/Images/LuigisMansion.png");
-    background-size: stretch;
+    background-size: 100% 100%;
   }
 
   &.minecraft {
     background-image: url("/Images/Minecraft.jpg");
-    background-size: stretch;
+    background-size: 100% 100%;
   }
 
   &.mario64 {
     background-image: url("/Images/Mario64.jpg");
-    background-size: stretch;
+    background-size: 100% 100%;
   }
 }
 
@@ -208,17 +209,9 @@ footer {
   padding: 25px;
 }
 
-.media-row-one{
+.media-row{
   display: flex;
-  justify-content: space-between; /* spreads them evenly */
-  align-items: center;
-  gap: 5px; /* space between items */
-  padding: 50px;
-}
-
-.media-row-two{
-  display: flex;
-  justify-content: space-between; /* spreads them evenly */
+  flex-wrap: wrap;
   align-items: center;
   gap: 5px; /* space between items */
   padding: 50px;
@@ -300,27 +293,31 @@ footer {
   text-align: center;
 }
 
-dialog[open] {
-  border-radius: 15px;
-  transition: all 0.3s ease-in-out;
-  opacity: 1;
-  padding: 50px;
-  position: relative;
-  @starting-style {
+@keyframes slide-up {
+  from {
     opacity: 0;
-    transform: translateY(75px);
+    translate: 0 75px;
   }
+}
+
+dialog[open] {
+  animation: slide-up 0.2s ease-in forwards;
+  background-color: white;
+  border-radius: 15px;
+  height: 100vh;
+  padding: 30px;
+  width: 100vw;
 
   .close {
     border: solid 2px black;
     background-color: red;
     border-radius: 5px;
     color: white;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: fixed;
+    top: 40px;
+    right: 40px;
 
-    transition:all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     &:hover {
       transform: scale(1.1,1.1);
     }
